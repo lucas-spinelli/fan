@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #000000, #ffffff); /* Degradado de negro a blanco */
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #87CEEB; /* Color celeste */
+  font-family: 'Neon', sans-serif; /* Fuente "Neon" */
+}
+
+.fan {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+  animation: rotate-fan 2s infinite linear;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.blades {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 80px;
+  background-color: #3498db;
+  transform-origin: 50% 100%;
+  transform: translate(-50%, -100%);
+  border-radius: 10px; /* Bordes redondeados para las cuchillas */
+}
+
+#blade1 {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+#blade2 {
+  transform: translate(-50%, -100%) rotate(120deg);
+}
+
+#blade3 {
+  transform: translate(-50%, -100%) rotate(240deg);
+}
+
+.power-button {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.power-button:hover {
+  background-color: #2980b9;
+}
+
+@keyframes rotate-fan {
+  to {
+    transform: rotate(360deg);
+  }
+}
